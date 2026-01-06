@@ -52,7 +52,7 @@ public class MongoChatMemoryStore implements ChatMemoryStore {
 
     @Override
     public void deleteMessages(Object memoryId) {
-        Criteria criteria = Criteria.where("_id").is(memoryId);
+        Criteria criteria = Criteria.where("memoryId").is(memoryId);
         Query query = new Query(criteria);
         mongoTemplate.remove(query, ChatMessages.class);
     }
