@@ -18,7 +18,7 @@ import dev.langchain4j.service.spring.AiServiceWiringMode;
         chatModel = "qwenChatModel",
         chatMemoryProvider = "ByChatMemoryProvider",
         tools = "appointmentTools",
-        contentRetriever = "contentRetrieverBy"
+        contentRetriever = "contentRetrieverByPincone"
 )
 public interface ByAgent {
 
