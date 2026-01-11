@@ -1,6 +1,6 @@
 package com.by.ai.langchain4j.controller;
 
-import com.by.ai.langchain4j.assistant.ByAssistant;
+import com.by.ai.langchain4j.assistant.ByAgent;
 import com.by.ai.langchain4j.bean.ChatForm;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -23,7 +23,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class ByAgentController {
 
     @Autowired
-    private ByAssistant byAssistant;
+    private ByAgent byAssistant;
 
     @Operation(summary = "对话")
     @PostMapping("/chat")

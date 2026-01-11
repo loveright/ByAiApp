@@ -17,9 +17,10 @@ import dev.langchain4j.service.spring.AiServiceWiringMode;
         wiringMode = AiServiceWiringMode.EXPLICIT,
         chatModel = "qwenChatModel",
         chatMemoryProvider = "ByChatMemoryProvider",
-        tools = "appointmentTools"
+        tools = "appointmentTools",
+        contentRetriever = "contentRetrieverBy"
 )
-public interface ByAssistant {
+public interface ByAgent {
 
     @SystemMessage(fromResource = "by-promopt-templete.txt")
     String chat(@MemoryId Long memoryId, @UserMessage String userMessage);
